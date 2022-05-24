@@ -1,20 +1,25 @@
 .App {
   text-align: center;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-  background-repeat: no-repeat ;
-  background-size: cover; 
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.box {
-  width: 20rem;
-  height: 20rem;
-  background-color: white;
+.slider-wrapper {
+  cursor: grab;
+  overflow: hidden;
+}
+
+.inner-carousel {
+  display: flex;
+}
+
+.item {
+  min-height: 30rem;
+  min-width: 20rem;
+  padding: 1.5rem;
+}
+
+.item img {
+  height: 100%;
+  width: 100%;
   border-radius: 2rem;
+  pointer-events: none;
 }
