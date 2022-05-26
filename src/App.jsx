@@ -1,7 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import "./App.css";
-import SliderComponent from "./components/SliderComponent";
+import { Router, Routes, Route, Link } from "react-router-dom";
+
+import NavbarComponent from "./components/NavbarComponent";
+import SecondPage from "./pages/SecondPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   const [move, setMove] = useState(false);
@@ -24,7 +27,13 @@ function App() {
         animate={{ rotate: [0, 200, 200, 0], x: [0, 150, -150, 0] }}
         transition={{ repeat: Infinity, duration: 1 }}
       ></motion.div> */}
-      <SliderComponent />
+      <NavbarComponent />
+      <AnimatePresence>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/second" element={<SecondPage />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

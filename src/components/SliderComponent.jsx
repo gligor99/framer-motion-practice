@@ -20,7 +20,14 @@ const SliderComponent = () => {
       >
         {images.map((image) => {
           return (
-            <motion.div className="item" key={image.toString()}>
+            <motion.div
+              className="item"
+              key={image.toString()}
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.75, delay: 0.5 },
+              }}
+            >
               <img src={image} alt={image} />
             </motion.div>
           );
