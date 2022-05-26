@@ -5,6 +5,7 @@ import { Router, Routes, Route, useLocation } from "react-router-dom";
 import NavbarComponent from "./components/NavbarComponent";
 import SecondPage from "./pages/SecondPage";
 import HomePage from "./pages/HomePage";
+import ThirdPage from "./pages/ThirdPage";
 
 function App() {
   const [move, setMove] = useState(false);
@@ -29,10 +30,11 @@ function App() {
         transition={{ repeat: Infinity, duration: 1 }}
       ></motion.div> */}
       <NavbarComponent />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter initial={false}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
           <Route path="/second" element={<SecondPage />} />
+          <Route path="/third" element={<ThirdPage />} />
         </Routes>
       </AnimatePresence>
     </div>

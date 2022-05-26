@@ -14,6 +14,11 @@ const NavbarComponent = () => {
           Second Page
         </NavLink>
       </li>
+      <li>
+        <NavLink className="link" to="/third">
+          Third Page
+        </NavLink>
+      </li>
     </ul>
   );
 };

@@ -2,13 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import SliderComponent from "../components/SliderComponent";
 
-const SecondPage = () => {
+const ThirdPage = () => {
   return (
     <motion.div
       className="home-page"
       initial={{ scaleY: 0 }}
       animate={{ scaleY: 1 }}
-      exit={{ opacity: 0 }}
+      exit={{ scaleY: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <section className="second-page">
         <h1>Third Page Content</h1>
@@ -35,4 +36,4 @@ const SecondPage = () => {
   );
 };
 
-export default SecondPage;
+export default ThirdPage;
