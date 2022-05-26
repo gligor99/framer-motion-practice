@@ -6,6 +6,7 @@ import NavbarComponent from "./components/NavbarComponent";
 import SecondPage from "./pages/SecondPage";
 import HomePage from "./pages/HomePage";
 import ThirdPage from "./pages/ThirdPage";
+import FourthPage from "./pages/FourthPage";
 
 function App() {
   const [move, setMove] = useState(false);
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/second" element={<SecondPage />} />
           <Route path="/third" element={<ThirdPage />} />
+          <Route path="/fourth" element={<FourthPage />} />
         </Routes>
       </AnimatePresence>
     </div>

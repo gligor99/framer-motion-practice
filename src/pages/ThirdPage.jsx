@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SliderComponent from "../components/SliderComponent";
+import SidebarComponent from "../components/SidebarComponent";
 
 const ThirdPage = () => {
   return (
