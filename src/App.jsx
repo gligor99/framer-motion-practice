@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Router, Routes, Route, Link } from "react-router-dom";
+import { Router, Routes, Route, useLocation } from "react-router-dom";
 
 import NavbarComponent from "./components/NavbarComponent";
 import SecondPage from "./pages/SecondPage";
@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   const [move, setMove] = useState(false);
+  const location = useLocation();
 
   return (
     <div className="App">
@@ -28,8 +29,8 @@ function App() {
         transition={{ repeat: Infinity, duration: 1 }}
       ></motion.div> */}
       <NavbarComponent />
-      <AnimatePresence>
-        <Routes>
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
           <Route path="/second" element={<SecondPage />} />
         </Routes>

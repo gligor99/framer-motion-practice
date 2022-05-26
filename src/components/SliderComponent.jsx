@@ -24,8 +24,8 @@ const SliderComponent = () => {
               className="item"
               key={image.toString()}
               whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.75, delay: 0.5 },
+                scale: 1.05,
+                transition: { duration: 0.35, delay: 0.5 },
               }}
             >
               <img src={image} alt={image} />

@@ -6,12 +6,12 @@ const SecondPage = () => {
   return (
     <motion.div
       className="home-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ scaleY: 0 }}
+      animate={{ scaleY: 1 }}
       exit={{ opacity: 0 }}
     >
       <section className="second-page">
-        <h1>Second Page Content</h1>
+        <h1>Third Page Content</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ex
           beatae impedit accusantium ducimus culpa dolorum porro, iste enim
